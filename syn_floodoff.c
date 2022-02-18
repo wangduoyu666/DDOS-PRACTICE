@@ -6,8 +6,6 @@
 #include "unp.h"
 #include <pthread.h>
 
-change_host(int );
-change_port(int );
 about_tcp(struct tcp *transinfo, int );
 relate_ip(struct ip *interinfo, int );
 
