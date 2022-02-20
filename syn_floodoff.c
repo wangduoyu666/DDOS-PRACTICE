@@ -1,14 +1,9 @@
-//this code can't make .exe file
-//because some function type errors
+//this code 
 //never mind,just record it in github
 //I will write some else code to make it
 
 #include "unp.h"
 #include <pthread.h>
-
-about_tcp(struct tcp *transinfo, int );
-relate_ip(struct ip *interinfo, int );
-
 
 struct tcp{
         uint32_t seq;
@@ -34,6 +29,9 @@ struct ip{
         uint32_t saddr;
         uint32_t daddr;
 }interinfo;
+
+about_tcp(struct tcp *transinfo, int );
+relate_ip(struct ip *interinfo, int );
 
 int main(int argc, char *argv)
 {
