@@ -1,4 +1,4 @@
-//this code 
+//this code is not good enough
 //never mind,just record it in github
 //I will write some else code to make it
 
