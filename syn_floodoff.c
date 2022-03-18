@@ -2,6 +2,7 @@
 //never mind,just record it in github
 //I will write some else code to make it
 
+/*
 #include "unp.h"
 #include <pthread.h>
 
@@ -105,3 +106,4 @@ relate_ip(struct ip *interinfo, int iplen)
         }
         return(0);
 }
+*/
