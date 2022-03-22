@@ -187,9 +187,9 @@ int main(int argc, char **argv[]) {
     else {
         printf("packet send: %d\n", interinfo->sum_len);
     }
-
-
 }
+
+
 void* syn_flood(void* data) {
     struct sockaddr_in  servaddr;
     struct tcp* transinfo = NULL;
@@ -246,8 +246,10 @@ unsigned short csum(unsigned short* buf, int nwords) {
 }
 
 //draft draft draft
+//I will code this syn_flood again
 //gdb yyds!
-//2022.3.33
+//2022.3.23
+
 
 
 
