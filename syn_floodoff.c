@@ -115,7 +115,6 @@ relate_ip(struct ip *interinfo, int iplen)
 #include <stdbool.h>
 #include "unp.h"
 
-
 struct tpseudo_hdr{
     uint32_t saddr;
     uint32_t daddr;
