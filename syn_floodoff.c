@@ -152,7 +152,7 @@ struct ip {
 
 
 void* syn_flood(void* data);
-uint32_t get_random_ip();
+int get_random_ip();
 unsigned short csum(unsigned short* buf, int nwords);
 
 /*
@@ -279,13 +279,15 @@ static void sighandler(int sig) {
 */
 
 
-uint32_t get_random_ip() {
-    uint32_t ip;
+ int get_random_ip() {
+    int i;
+        int host[i];
+                host[1] = rand() % 0xFF;
+                host[2] = rand() % 0xFF;
+                host[3] = rand() % 0xFF;
+                host[4] = rand() % 0xFF;
 
-    for (char* p = (char*)&ip; p < (char*)(&ip + 1); p++)
-        *p = rand() & 0xFF;
-
-    return ip;
+       printf("%d.%d.%d.%d\n", host[1],host[2],host[3],host[4]);
 }
 
 unsigned short csum(unsigned short* buf, int nwords) {
