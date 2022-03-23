@@ -122,7 +122,7 @@ struct tpseudo_hdr{
     unsigned char res;
     unsigned char proto;
     uint16_t tcp_len;
-}g;
+};
 
 struct tcp {
     uint32_t seq;
