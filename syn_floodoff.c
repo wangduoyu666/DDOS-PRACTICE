@@ -155,9 +155,50 @@ void* syn_flood(void* data);
 uint32_t get_random_ip();
 unsigned short csum(unsigned short* buf, int nwords);
 
+/*
+static void sighandler(int sig);
+
+static int glob = 0;
+static pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
+*/
 
 
 int main(int argc, char **argv[]) {
+    /*
+     int loops;
+    int loc, j, s;
+    pthread_t t;
+
+    if (argc != 2)
+        err_quit("usage: tcpcli<IPaddress>");
+    
+    for (j = 0; j < loops; j++) {
+        s = pthread_mutex_lock(&mtx);
+        if (s != 0)
+            err_sys(s, "pthread_mutex_lock");
+        loc++;
+        
+        loops = (argc > 1) ? scanf("%d", argc) : 10000000;
+        s = pthread_create(&t, NULL,syn_flood, &loops);
+        if (s != 0)
+            err_sys(s, "pthread_create");
+        s = pthread_join(t, NULL);
+        if (s != 0)
+            err_sys(s, "pthread_join");
+
+        if (signal(SIGINT, sighandler) == SIG_ERR)
+            err_quit("signal");
+        for (; ;)
+            pause();
+
+        s = pthread_mutex_unlock(&mtx);
+        if (s != 0)
+            err_sys(s, "pthread_mutex_unlock");
+
+        exit(0);
+    }
+    */  
+        
     int sockfd;
     struct sockaddr_in  servaddr;
 
@@ -224,7 +265,18 @@ void* syn_flood(void* data) {
     pseudo_h->tcp_len = htons(sizeof(struct tcp));
 }
 
-
+/*
+static void sighandler(int sig) {
+    static int count = 0;
+    if (sig = SIGINT) {
+        count++;
+        printf("caught SIGINT (%d)\n", count);
+        return;
+    }
+    printf("Caught SIGQUIT--that's all folks!\n");
+    exit(0);
+}
+*/
 
 
 uint32_t get_random_ip() {
