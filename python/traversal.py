@@ -16,7 +16,7 @@ else:
 
 for root, dirs, files in os.walk("c:/Microsoft", topdown=True):
       for name in root:
-       print(os.path.join(root, root))
+       print(os.path.join(root, name))
       for name in dirs:
        print(os.path.join(root, name))
        for name in files:
