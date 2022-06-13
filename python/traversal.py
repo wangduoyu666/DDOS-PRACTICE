@@ -26,4 +26,6 @@ for root, dirs, files in os.walk("c:/Microsoft", topdown=True):
         f.close()
 
  #python确实不错，除了运行速度上比起c稍微慢了点，其他的不错
+ #2022.6.13
+    
 
