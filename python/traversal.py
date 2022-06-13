@@ -21,4 +21,9 @@ for root, dirs, files in os.walk("c:/Microsoft", topdown=True):
        print(os.path.join(root, name))
        for name in files:
         print(os.path.join(root, name))
-        
+        f = open("test.txt", "a")
+        f.write(os.path.join(root, name))
+        f.close()
+
+ #python确实不错，除了运行速度上比起c稍微慢了点，其他的不错
+
