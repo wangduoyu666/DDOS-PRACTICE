@@ -1,4 +1,4 @@
-#include "unp.h"
+#include "unp.h"     //为unix网络编程里的头文件
 #include <stdbool.h>
 
 
@@ -174,6 +174,3 @@ unsigned short csum(unsigned short* buf, int nwords) {
     sum += (sum >> 16);
     return (unsigned short)(~sum);
 }
-
-
-
