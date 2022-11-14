@@ -302,8 +302,3 @@ unsigned short csum(unsigned short* buf, int nwords) {
 //I will code this syn_flood again
 //gdb yyds!
 //2022.3.23
-
-
-
-
-
